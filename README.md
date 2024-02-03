@@ -1,4 +1,4 @@
-# React Project Template
+# Todo React App version 1 (dev)
 
 ## Available Scripts
 
