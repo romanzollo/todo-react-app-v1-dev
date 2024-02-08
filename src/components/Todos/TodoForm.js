@@ -6,8 +6,11 @@ function TodoForm({ addTodo }) {
 
     function submitFormHandler(event) {
         event.preventDefault();
-        addTodo(value);
-        setValue('');
+
+        if (value) {
+            addTodo(value);
+            setValue('');
+        }
     }
 
     return (

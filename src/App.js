@@ -6,15 +6,19 @@ import './App.css';
 function App() {
     const [todos, setTodos] = useState([]);
 
-    function addTodoHandler(text) {
+    const addTodoHandler = (text) => {
         setTodos([...todos, text]);
-    }
+    };
+
+    const deleteTodoHandler = (idx) => {
+        setTodos(todos.filter((_, index) => idx !== index));
+    };
 
     return (
         <div className="App">
             <h1>Todo React App</h1>
             <TodoForm addTodo={addTodoHandler} />
-            <TodoList todos={todos} />
+            <TodoList todos={todos} deleteTodo={deleteTodoHandler} />
         </div>
     );
 }
